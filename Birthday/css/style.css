@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+@import url('https://fonts.googleapis.com/css?family=Dancing Script');
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script|Josefin+Sans:600');
+
+* {
+  padding: 0%;
+  margin: 0%;
+}
+
+body {
+  display: flex;
+  font-size: 16px;
+  min-height: 100vh;
+  user-select: none;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  -webkit-user-select: none;
+  background: linear-gradient(-45deg, #000000, #000000, #000000, #000000);
+  background-size: 200% 200%;
+  animation: gradient 15s ease infinite;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.date {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.anywhere {
+  color: white;
+  font-size: 12px;
+  margin-bottom: 60px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.quote {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 0em;
+  margin-top: 0em;
+  font-family: 'Dancing Script';
+}
+
+
+.happy {
+  color: white;
+  font-size: 4rem;
+  margin-bottom: 30px;
+  margin-top: 0em;
+  font-family: 'Lobster';
+}
+
+.birthdaywishee {
+  color: white;
+  margin-top: 0.00em;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.neonText {
+  animation: flicker 1.5s infinite alternate;
+  color: #fff;
+}
+
+
+
+h1 {
+  font-size: 4.2rem;    
+}
+
+
+/* Flickering animation */
+@keyframes flicker {
+    
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+
+      text-shadow:
+      0 0 7px #ffffff,
+      0 0 10px #ffffff,
+      0 0 21px #ffffff,
+      0 0 42px #acf2c0,
+      0 0 82px #acf2c0,
+      0 0 92px #acf2c0,
+      0 0 102px #acf2c0,
+      0 0 151px #acf2c0;
+  
+  }
+  
+  20%, 24%, 55% {        
+      text-shadow: none;
+  }    
+}
+
+
+/* Additional styling */
+  
+h1 {
+	font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+	margin-bottom: 100px;
+	  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+h1, h2 {
+  text-align: center;
+  font-weight: 5px;
+}
