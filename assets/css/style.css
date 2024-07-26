@@ -430,7 +430,7 @@ body {
   margin: 8% auto;
 
 }
-.close {
+.xxxclose {
   background: #f2584e;
   color: #FFFFFF;
   line-height: 25px;
@@ -450,7 +450,7 @@ body {
   -webkit-box-shadow: 1px 1px 3px #000;
   box-shadow: 1px 1px 3px #000;
 }
-.close:hover {
+.xxxclose:hover {
   background: var(--green);
 }
 /*-----------------------------------*\
