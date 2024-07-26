@@ -326,7 +326,7 @@ body {
   top: 10px;
   right: 10px;
   left: 10px;
-  padding-block: 12px;
+  padding-block: 10px;
   z-index: 4;
   transition: var(--transition-2);
 }
@@ -403,8 +403,54 @@ body {
 }
 
 .navbar-link:is(:hover, :focus) { color: var(--green); }
+/*-----------------------------------*\
+  visitors
+\*-----------------------------------*/
 
+.modalDialog {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99999;
+  opacity: 0;
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+  pointer-events: none;
+}
+.modalDialog:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+.modalDialog > div {
+  width: 400px;
+  position: relative;
+  margin: 8% auto;
 
+}
+.close {
+  background: #f2584e;
+  color: #FFFFFF;
+  line-height: 25px;
+  position: absolute;
+  right: -12px;
+  text-align: center;
+  top: -10px;
+  width: 24px;
+  text-decoration: none;
+  font-weight: bold;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+  -moz-box-shadow: 1px 1px 3px #000;
+  -webkit-box-shadow: 1px 1px 3px #000;
+  box-shadow: 1px 1px 3px #000;
+}
+.close:hover {
+  background: var(--green);
+}
 /*-----------------------------------*\
   #MORE MUSIC
 \*-----------------------------------*/
@@ -1240,7 +1286,7 @@ textarea.input-field {
    */
 
   .hero {
-    padding-block-start: calc(var(--section-padding) + 100px);
+    padding-block-start: calc(var(--section-padding) + 40px);
     text-align: left;
   }
 
