@@ -31,6 +31,8 @@
     - custom css link
   -->
   <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/slider.css">
+  
 
   <!-- 
     - google font link
@@ -40,6 +42,10 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&family=Poppins:wght@400;500;600&display=swap"
     rel="stylesheet">
+	    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
 
   <!-- 
     - preload image
@@ -382,170 +388,94 @@
             Member's Experiences
             <span class="span has-before"></span>
           </h2>
+    <div class="testimonial-slider">
+      <h1 class="titletestimony">What Our Clients Say</h1>
 
-          <ul class="grid-list">
+      <!-- Testimonial List -->
+      <div class="testimonial-list" role="region" aria-label="Testimonials">
+        <!-- Testimonial -->
+        <div class="testimonial">
+          <!-- Bootstrap Icon -->
+          <i class="bi bi-quote"></i>
 
-            <li>
-              <div class="chapter-card">
+          <blockquote>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+            quos laborum nesciunt, eveniet illum eum neque vitae perspiciatis
+            nemo quo, molestias placeat sunt dignissimos nulla. Omnis
+            consectetur aliquam ab incidunt!
+          </blockquote>
 
-                <p class="card-subtitle">Date</p>
+          <!-- User Info -->
+          <div class="user-info">
+            <img src="https://placehold.co/48?text=1" alt="" />
+            <div class="user-details">
+              <p class="name">John Doe</p>
+              <p class="company">CEO, Company XYZ</p>
+            </div>
+          </div>
+        </div>
+        <!-- /Testimonial -->
+        <!-- Testimonial -->
+        <div class="testimonial">
+          <!-- Bootstrap Icon -->
+          <i class="bi bi-quote"></i>
 
-                <h3 class="h3 card-title">Title</h3>
+          <blockquote>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+            quos laborum nesciunt, eveniet illum eum neque vitae perspiciatis
+            nemo quo, molestias placeat sunt dignissimos nulla. Omnis
+            consectetur aliquam ab incidunt!
+          </blockquote>
 
-                <p class="card-text">
-  <div class="readm">
-    <h3>what is Gravity?</h3>
-    <p>Gravity is a fundamental force of nature that is responsible for the attraction between objects with mass.
-	<a id="read_more_1" onclick="readMoreFun('hide_seek-1',this.id)" class="read_more">...Read More</a></p>
-    <div class="hide_seek-1 hidden-content">
-      <p>It is one of the four fundamental forces in the universe, along with electromagnetism</p>
-<a onclick="readMoreFun('hide_seek-1','read_more_1')" class="read_less">...Read Less</a></p>
+          <!-- User Info -->
+          <div class="user-info">
+            <img src="https://placehold.co/48?text=2" alt="" />
+            <div class="user-details">
+              <p class="name">John Doe</p>
+              <p class="company">CEO, Company XYZ</p>
+            </div>
+          </div>
+        </div>
+        <!-- /Testimonial -->
+        <!-- Testimonial -->
+        <div class="testimonial">
+          <!-- Bootstrap Icon -->
+          <i class="bi bi-quote"></i>
+
+          <blockquote>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+            quos laborum nesciunt, eveniet illum eum neque vitae perspiciatis
+            nemo quo, molestias placeat sunt dignissimos nulla. Omnis
+            consectetur aliquam ab incidunt!
+          </blockquote>
+
+          <!-- User Info -->
+          <div class="user-info">
+            <img src="https://placehold.co/48?text=3" alt="" />
+            <div class="user-details">
+              <p class="name">John Doe</p>
+              <p class="company">CEO, Company XYZ</p>
+            </div>
+          </div>
+        </div>
+        <!-- /Testimonial -->
+      </div>
+      <!-- /Testimonial List -->
+
+      <!-- Button Navigation -->
+      <button class="nav prev" aria-label="Previous Testimonial">
+        <i class="bi bi-chevron-left"></i>
+      </button>
+
+      <button class="nav next" aria-label="Next Testimonial">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+      <!-- /Button Navigation -->
+
+      <!-- Dot Navigation -->
+      <div class="dots-container"></div>
+      <!-- /Dot Navigation -->
     </div>
-  </div>
-                </p>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="chapter-card">
-
-                <p class="card-subtitle">Date</p>
-
-                <h3 class="h3 card-title">Title</h3>
-
-                <p class="card-text">
-				<style>
-#more {display: none;}
-</style>
-Panginoon ang nais ko
-Kagandahan mo ay pagmasdan
-Ang pag ibig mo saki'y tugon
-Kailanma'y 'di pababayaan
-
-<span id="dots">...</span>
-<span id="more">
-Sa'yo lamang matatagpuan
-Sa'yo lamang
-Mananatili sa iyong lilim
-At sasambahin ka sa dakong lihim
-Mananatili sa iyong lilim
-Nang masumpungan ka
-Sa dakong lihim
-</span>
-</p>
-<button onclick="myFunction()" id="myBtn" class="read_more">...Read more</button>
-             
-
-              </div>
-            </li>
-
-            <li>
-              <div class="chapter-card">
-
-                <p class="card-subtitle">Date</p>
-
-                <h3 class="h3 card-title">Title</h3>
-
-                <p class="card-text">
-					Share your experience- Description
-					Share your experience- Description
-					Share your experience- Description
-                </p>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="chapter-card">
-
-                <p class="card-subtitle">Date</p>
-
-                <h3 class="h3 card-title">Title</h3>
-
-                <p class="card-text">
-					Share your experience- Description
-					Share your experience- Description
-					Share your experience- Description
-                </p>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="chapter-card">
-
-                <p class="card-subtitle">Date</p>
-
-                <h3 class="h3 card-title">Title</h3>
-
-                <p class="card-text">
-					Share your experience- Description
-					Share your experience- Description
-					Share your experience- Description
-                </p>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="chapter-card">
-
-                <p class="card-subtitle">Date</p>
-
-                <h3 class="h3 card-title">Title</h3>
-
-                <p class="card-text">
-					Share your experience- Description
-					Share your experience- Description
-					Share your experience- Description
-                </p>
-
-              </div>
-            </li>
-
-
-
-            <li>
-              <div class="chapter-card">
-
-                <p class="card-subtitle">Date</p>
-
-                <h3 class="h3 card-title">Title</h3>
-
-                <p class="card-text">
-					Share your experience- Description
-					Share your experience- Description
-					Share your experience- Description
-                </p>
-	
-	    <!-- Trigger toggleText() when the 
-            button is clicked -->
-   <!-- <button onclick="toggleText()" id="textButton">
-        Show More...
-    </button> -->
- 
-    <script src="./assets/js/show.js"></script>
-
-              </div>
-            </li>
-			            <li>
-              <div class="chapter-card">
-
-                <p class="card-subtitle">Date</p>
-
-                <h3 class="h3 card-title">Title</h3>
-
-                <p class="card-text">
-					Share your experience- Description
-					Share your experience- Description
-					Share your experience- Description
-                </p>
-
-              </div>
-            </li>
-
-          </ul>
 
         </div>
       </section>
@@ -1194,6 +1124,7 @@ Sa dakong lihim
   -->
   
   <script src="./assets/js/ano.js" defer></script>
+  <script src="./assets/js/slider.js" defer></script>
   <script src="./assets/js/script.js" defer></script>
 
   <!-- 
