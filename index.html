@@ -1063,13 +1063,19 @@ Oh, my soul
 
           <div class="wrapper">
 
-            <form action="" class="contact-form">
+            <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+              <input type="hidden" name="access_key" value="af707306-c6da-4f43-a1d2-4f0d2965604e"> 
+
+              <select name="Subject"class="input-field">
+               <option>Testimony</option> 
+               <option>Suggestion</option> 
+               <option>Inquiry</option> 
+               <option>Others</option> 
+             </select>
 
               <input type="text" name="name" placeholder="Your Name" required class="input-field">
 
-              <input type="email" name="email_address" placeholder="Your Email" required class="input-field">
-
-              <input type="text" name="subject" placeholder="Subject" required class="input-field">
+             <input type="text" name="Title" placeholder="Title" required class="input-field">
 
               <textarea name="message" placeholder="Your Message" class="input-field"></textarea>
 
@@ -1106,7 +1112,7 @@ Oh, my soul
                 <ul class="social-list">
 
                   <li>
-                    <a href="#" class="social-link">
+                    <a href="https://www.facebook.com/NavotasAssemblyOfGod?mibextid=ZbWKwL" target="_blank" class="social-link">
                       <ion-icon name="logo-facebook"></ion-icon>
                     </a>
                   </li>
