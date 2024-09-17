@@ -57,6 +57,8 @@
   --fs-6: 2rem;
   --fs-7: 1.8rem;
 
+  
+
   --fw-500: 500;
   --fw-700: 700;
 
@@ -163,6 +165,10 @@ body {
   color: var(--sonic-silver);
   font-size: 1.6rem;
   line-height: 1.8;
+    background-image:url('./assets/images/homepage.jpg');
+background-repeat:no-repeat;
+background-size:contain;
+background-position:center;
 }
 
 :focus-visible { outline-offset: 4px; }
@@ -188,18 +194,60 @@ body {
   #REUSED STYLE
 \*-----------------------------------*/
 
-.container { padding-inline: 15px; }
+
+.floating {  
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes floating {
+    from { transform: translate(0,  0px); }
+    65%  { transform: translate(0, 15px); }
+    to   { transform: translate(0, -0px); }    
+}
+
 
 .section { padding-block: var(--section-padding); }
 
-.section:nth-child(odd) { background-color: var(--gray); }
+.section:nth-child(odd) { 
+background-image: linear-gradient(357deg, rgba(3,3,3,1) 0%, rgba(55,57,55,1) 31%, rgba(255,255,255,1) );
+  } 
+  .container { padding-inline: 15px; }
+
+.section { padding-block: var(--section-padding); }
+
+.has-before,
+.has-after {
+  position: relative;
+  z-index: 1;
+}
+
+.has-before::before,
+.has-after::after {
+  position: absolute;
+  content: "";
+}
+
+.has-bg-image {
+  
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
 
 .section-subtitle {
   color: var(--green);
+  font-size: 25px;
   text-transform: uppercase;
   font-weight: var(--fw-700);
   letter-spacing: 4px;
   text-align: center;
+  margin-top: 25px;
 }
 
 .h1,
@@ -211,13 +259,20 @@ body {
   line-height: 1.2;
 }
 
-.h1 { font-size: var(--fs-2); }
+
+
+
+.h1 { font-size: 4.5rem; 
+text-shadow: 2px 2px 8px var(--white);}
 
 .h2 { font-size: var(--fs-3); }
 
 .h3 { font-size: var(--fs-5); }
 
-.section-text { font-size: var(--fs-7); }
+.section-text { font-size: var(--fs-7);
+padding-bottom: 50px; 
+color: var(--green)
+}
 
 .w-100 { width: 100%; }
 
@@ -453,10 +508,56 @@ body {
 .xxxclose:hover {
   background: var(--green);
 }
+
+
+
+@keyframes animate {
+    0%{
+        scale: 1;
+    }
+    
+    50%{
+        scale: 1.05;
+    }
+    
+    100%{
+        scale: 1;
+    }
+}
+
+.main-container .content{
+    color: white;
+    width: 40%;
+    min-height: 100px;
+}
+
+.content h1{
+    font-size: clamp(1rem, 1rem + 5vw, 1.8rem);
+}
+
+.content h1 span{
+    color: #077b32;
+    text-shadow: 0  0 10px #077b32;
+}
+
+.content .typewriter{
+    font-size: clamp(1rem, 1rem + 5vw, 2.5rem);
+    font-weight: 600;
+}
+
+.content .typewriter-text{
+    color: #077b32;
+    text-shadow: 0 0 10px #077b32;
+}
+
+.content p{
+    font-size: clamp(0.4rem , 0.2rem + 9vw, 1rem);
+    margin: 10px 0;
+}
 /*-----------------------------------*\
   #MORE MUSIC
 \*-----------------------------------*/
-.btnn {
+/*.btnn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -623,7 +724,7 @@ strong {
     transform: scale(0.75);
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
   }
-}
+}*/
 
 /*-----------------------------------*\
   #HERO
@@ -632,33 +733,28 @@ strong {
 .hero {
   padding-block-start: calc(var(--section-padding) + 60px);
   text-align: center;
+  
 }
 
 .hero .container {
   display: grid;
-  gap: 60px;
+  width: 100%;
 }
 
-.hero .hero-title { margin-block: 10px 25px; }
+.hero .hero-title { margin-block: 10px 25px;
+padding-left: 40px;
+padding-right: 40px; }
 
 .hero-banner {
-  padding-inline-start: 30px;
-  padding-block-end: 30px;
+  /*padding-inline-start: 30px;
+  padding-block-end: 30px;*/
   max-width: 420px;
   margin-inline: auto;
 }
 
 .hero-banner .w-100 { border-radius: 10px 30px; }
 
-.hero-banner::before {
-  top: 30px;
-  right: 30px;
-  bottom: 0;
-  left: 0;
-  background-color: var(--transgreen);
-  border-radius: var(--radius-10);
-  z-index: -1;
-}
+
 
 .play-btn {
   position: absolute;
@@ -685,7 +781,7 @@ strong {
 /*-----------------------------------*\
   #MUSIC
 \*-----------------------------------*/
-.button {
+/*.button {
   height: 50px;
   width: 300px;
   position: relative;
@@ -727,10 +823,193 @@ strong {
 .type1:hover::after {
   visibility: visible;
   transform: scale(100) translateX(2px);
+}*/
+
+.img-btn-container
+  width: 100%
+  min-height: 100%
+  height: 100%
+  //max-width: 1000px
+  //margin: 50px auto
+  
+.col-2
+  position: relative
+  width: 50%
+  height: 50%
+  float: left
+  
+  @media(max-width: 768px)
+    width: 100%
+  
+=expand
+  position: absolute
+  width: 100%
+  height: 100%
+
+.image-btn-wrapper
+  position: relative
+  overflow: hidden
+  width: 100%
+  height: 100% //300px
+  
+  &:hover .image-btn-bg
+    opacity: .6
+    transform: scale(1.2)
+
+.line-bottom
+  &:before
+    position: absolute
+    content: ''
+    width: 100%
+    height: 5px
+    bottom: 0
+    left: 0
+    background: #3DAB47
+    z-index: 1
+    transform: scaleX(0) translateZ(0)
+    transform-origin: 0 0
+    transition: .5s cubic-bezier(0.23, 1, 0.32, 1)
+  
+  &:hover:before
+    transform: scaleX(1) translateZ(0)
+  
+.image-btn-bg
+  +expand
+  transition: all .5s ease-in-out
+  
+  &.btn-1
+    background: url(https://picsum.photos/id/237/800/400) center/cover no-repeat
+  &.btn-2
+    background: url(http://picsum.photos/id/10/800/400) center/cover no-repeat
+  &.btn-3
+    background: url(http://picsum.photos/id/110/800/400) center/cover no-repeat
+  &.btn-4
+    background: url(http://picsum.photos/id/101/800/400) center/cover no-repeat
+
+.link
+  +expand
+  display: table
+  text-decoration: none
+  text-transform: uppercase
+  color: white
+
+.cell
+  text-align: center
+  display: table-cell
+  vertical-align: middle
+  
+  *
+    padding: 0
+    margin: 0
+
+
+
+
+
+
+
+
+.wrapcross {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 
+.buttoncross {
+  min-width: 150px;
+  min-height: 60px;
+  display: inline-flex;
+  font-family: 'Nunito', sans-serif;
+  font-size: 15px;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1.3px;
+  font-weight: 800;
+  color: #313133;
+  background: #00ff4c;
+background: linear-gradient(90deg, rgba(155, 242, 197,1) 0%, rgba(0, 255, 123,1) 100%);
+  border: none;
+  border-radius: 1000px;
+  box-shadow: 12px 12px 24px rgba(0, 255, 123,.64);
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 10px;
+      animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  @keyframes floating {
+    from { transform: translate(0,  0px); }
+    65%  { transform: translate(0, 15px); }
+    to   { transform: translate(0, -0px); }    
+}
 
+.buttoncross::before {
+content: '';
+  border-radius: 1000px;
+  min-width: calc(150px + 12px);
+  min-height: calc(60px + 12px);
+  border: 6px solid #9bf2c5;
+  box-shadow: 0 0 60px rgba(0, 255, 123,.64);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all .3s ease-in-out 0s;
+}
+
+.buttoncross:hover, 
+.buttoncross:focus {
+  color: #187344;
+  transform: translateY(-6px);
+}
+
+.buttoncross:hover::before, 
+.buttoncross:focus::before {
+  opacity: 1;
+}
+
+.buttoncross::after {
+  content: '';
+  width: 30px; height: 30px;
+  border-radius: 100%;
+  border: 6px solid #9bf2c5;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ring 1.5s infinite;
+}
+
+.buttoncross:hover::after, 
+.buttoncross:focus::after {
+  animation: none;
+  display: none;
+}
+
+@keyframes ring {
+  0% {
+    width: 25px;
+    height: 25px;
+    opacity: 1;
+  }
+  100% {
+    width: 290px;
+    height: 190px;
+    opacity: 0;
+  }
+}
 
 
 
@@ -965,7 +1244,7 @@ color: var(--green);
   font-size: var(--fs-1);
   color: var(--black);
   font-weight: var(--fw-700);
-  margin-block-start: 10px;
+  margin-block-start: 50px;
 }
 
 .events-card-list { margin-block: 20px 40px; }
