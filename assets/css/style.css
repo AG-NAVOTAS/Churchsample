@@ -732,12 +732,12 @@ strong {
   font-family: var(--ff-philosopher);
   font-weight: 900;
   text-align: center;
-  text-shadow: 3px 3px 2.5px var(--black);
+  text-shadow: -2.5px -2.5px 1px var(--white);
   line-height: 50px;
-  background: linear-gradient(to right, #FFFFFF 0, #1dad65 15%, #FFFFFF 40%);
+  background: linear-gradient(to right, #000 0, #1dad65 35%, #000 40%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: animate 7s linear infinite;
+  animation: animate 10s linear infinite;
 }
 
 @keyframes  animate {
