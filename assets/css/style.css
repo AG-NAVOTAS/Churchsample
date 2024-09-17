@@ -730,11 +730,11 @@ strong {
 .shine {
   font-size: 3.5em;
   font-family: var(--ff-philosopher);
-  t
+  font-weight: 900;
   text-align: center;
-  text-shadow: 2px 2px 1px var(--white);
+  text-shadow: 3px 3px 2.5px var(--black);
   line-height: 50px;
-  background: linear-gradient(to right, #000 0, #1dad65 5%, #000 40%);
+  background: linear-gradient(to right, #FFFFFF 0, #1dad65 15%, #FFFFFF 40%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: animate 7s linear infinite;
