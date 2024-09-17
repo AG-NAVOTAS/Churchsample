@@ -726,6 +726,31 @@ strong {
   }
 }*/
 
+
+.shine {
+  font-size: 3.5em;
+  font-family: var(--ff-philosopher);
+  t
+  text-align: center;
+  text-shadow: 2px 2px 1px var(--white);
+  line-height: 50px;
+  background: linear-gradient(to right, #000 0, #1dad65 5%, #000 40%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animate 7s linear infinite;
+}
+
+@keyframes  animate {
+  0% {
+    background-position: 0;
+  }
+  50% {
+    background-position: 470px;
+  }
+  100% {
+    background-position: 470px;
+  }
+}
 /*-----------------------------------*\
   #HERO
 \*-----------------------------------*/
@@ -824,90 +849,6 @@ padding-right: 40px; }
   visibility: visible;
   transform: scale(100) translateX(2px);
 }*/
-
-.img-btn-container
-  width: 100%
-  min-height: 100%
-  height: 100%
-  //max-width: 1000px
-  //margin: 50px auto
-  
-.col-2
-  position: relative
-  width: 50%
-  height: 50%
-  float: left
-  
-  @media(max-width: 768px)
-    width: 100%
-  
-=expand
-  position: absolute
-  width: 100%
-  height: 100%
-
-.image-btn-wrapper
-  position: relative
-  overflow: hidden
-  width: 100%
-  height: 100% //300px
-  
-  &:hover .image-btn-bg
-    opacity: .6
-    transform: scale(1.2)
-
-.line-bottom
-  &:before
-    position: absolute
-    content: ''
-    width: 100%
-    height: 5px
-    bottom: 0
-    left: 0
-    background: #3DAB47
-    z-index: 1
-    transform: scaleX(0) translateZ(0)
-    transform-origin: 0 0
-    transition: .5s cubic-bezier(0.23, 1, 0.32, 1)
-  
-  &:hover:before
-    transform: scaleX(1) translateZ(0)
-  
-.image-btn-bg
-  +expand
-  transition: all .5s ease-in-out
-  
-  &.btn-1
-    background: url(https://picsum.photos/id/237/800/400) center/cover no-repeat
-  &.btn-2
-    background: url(http://picsum.photos/id/10/800/400) center/cover no-repeat
-  &.btn-3
-    background: url(http://picsum.photos/id/110/800/400) center/cover no-repeat
-  &.btn-4
-    background: url(http://picsum.photos/id/101/800/400) center/cover no-repeat
-
-.link
-  +expand
-  display: table
-  text-decoration: none
-  text-transform: uppercase
-  color: white
-
-.cell
-  text-align: center
-  display: table-cell
-  vertical-align: middle
-  
-  *
-    padding: 0
-    margin: 0
-
-
-
-
-
-
-
 
 .wrapcross {
   display: flex;
