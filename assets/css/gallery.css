@@ -1,0 +1,58 @@
+
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+
+
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 250px;
+    margin-bottom: 100px;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 110%;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, transparent , #0002 , #0004);
+    display: grid;
+  place-content: center;
+  --border-angle: 0turn;
+  --main-bg: conic-gradient(
+      from var(--border-angle),
+      #213,
+      #112 5%,
+      #112 60%,
+      #213 95%
+    );
+  border: solid 2.5px transparent;
+  border-radius: 2em;
+  --gradient-border: conic-gradient(from var(--border-angle), transparent 25%, #a2ff00, #00ff5d 79%, transparent);
+  background: var(--main-bg) padding-box, var(--gradient-border) border-box, var(--main-bg) border-box;
+  background-position: center center;
+  -webkit-animation: bg-spin 3s linear infinite;
+          animation: bg-spin 3s linear infinite;
+}
+@-webkit-keyframes bg-spin {
+  to {
+    --border-angle: 1turn;
+  }
+}
+@keyframes bg-spin {
+  to {
+    --border-angle: 1turn;
+  }
+}
+.box:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0turn;
+}
+  }
